@@ -1,5 +1,6 @@
 
 
+import 'package:adviceapp/2_Application/pages/advice/AdvicePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -7,7 +8,7 @@ import 'package:provider/provider.dart';
 import '2_Application/core/services/Services_Theme.dart';
 import 'Theme.dart';
 
-void main() {
+void main() {//set
   runApp(ChangeNotifierProvider(
     create: (context) => ThemeService(),
     child: const MyApp(),
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         themeMode: themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
-        home: const Placeholder(),
+        home:  AdvicePage(),
       );
     });
   }
