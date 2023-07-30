@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import '2_Application/core/services/Services_Theme.dart';
 import 'Theme.dart';
 
-void main() {
+void main() {//set
   runApp(ChangeNotifierProvider(
     create: (context) => ThemeService(),
     child: const MyApp(),
