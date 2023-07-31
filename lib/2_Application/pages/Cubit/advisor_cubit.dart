@@ -18,8 +18,7 @@ class AdvisorCubit extends Cubit<AdvisorCubitState> {
     failureOrAdvice.fold(
             (failure) => emit(AdvisorError(message: _mapFaailureOnMessage(failure))),
             (advice) => emit(AdvisorLoaded(advice: advice.advice)),);
-    // execute business logic
-    // for example get and advice
+
 
 
     //

@@ -1,0 +1,4 @@
+
+class ServerExeption implements Exception{
+
+}
