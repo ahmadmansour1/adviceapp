@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
+import '../../../injectionDependency.dart';
+
 
 class AdvisorPageProvider extends StatelessWidget {
   const AdvisorPageProvider({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class AdvisorPageProvider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AdvisorCubit(),
+      create: (context) => sl<AdvisorCubit>(),
       child: const AdvicePage(),
     );
   }

@@ -6,7 +6,9 @@ import 'package:dartz/dartz.dart';
 //Either comme from package dartz its provide a functional programming
 // function can return 2 types
 class AdviceUsecases {
-  final adviceRepo = RepooImpl();
+  final RepooImpl adviceRepo ;
+
+  AdviceUsecases({required this.adviceRepo});
   Future<Either<Failure ,Entity>> getAdvices() async{
   return adviceRepo.getAdviceFromDataSource();
 

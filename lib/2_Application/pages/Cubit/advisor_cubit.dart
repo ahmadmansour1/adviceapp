@@ -10,8 +10,8 @@ import '../../../1_domain/failure/failure.dart';
 part 'advisor_state.dart';
 
 class AdvisorCubit extends Cubit<AdvisorCubitState> {
-  AdvisorCubit() : super(AdvisorInitial());
-  final AdviceUsecases usecasses = AdviceUsecases();
+  AdvisorCubit({required this.usecasses}) : super(AdvisorInitial());
+  final AdviceUsecases usecasses;
   void getAdvice() async {
     emit(AdvisorLoading());
     final failureOrAdvice =await usecasses.getAdvices();

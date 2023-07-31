@@ -7,8 +7,11 @@ import 'package:provider/provider.dart';
 
 import '2_Application/core/services/Services_Theme.dart';
 import 'Theme.dart';
+import 'injectionDependency.dart' as di; //dependency injection
 
-void main() {//set
+void main() async  {//set
+  WidgetsFlutterBinding.ensureInitialized();
+  di.init();
   runApp(ChangeNotifierProvider(
     create: (context) => ThemeService(),
     child: const MyApp(),
